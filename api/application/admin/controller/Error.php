@@ -24,4 +24,9 @@ class Error extends Controller
 
         return Db::table($table);
     }
+
+    public function initialize()
+    {
+        header("Access-Control-Allow-Origin:*");
+    }
 }
