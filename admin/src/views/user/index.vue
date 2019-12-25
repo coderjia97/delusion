@@ -1,12 +1,8 @@
 <template>
   <div>
-    <h2 class="admin-title">用户列表</h2>
-    <Row>
-      <Col :span="6" class="admin-operation">
-        <Button type="info" @click="add">添加</Button>
-      </Col>
-      <Col :span="18" class="admin-search">
-        <Form inline>
+    <Head title="用户列表">
+        <Button type="info" @click="add" slot="head-left">添加</Button>
+        <Form inline slot="head-right">
           <FormItem>
             <Input v-model="search.value" style="width:260px;">
               <Select v-model="search.type" slot="prepend" style="width:100px">
@@ -22,8 +18,7 @@
             <Button type="info" @click="list">搜索</Button>
           </FormItem>
         </Form>
-      </Col>
-    </Row>
+    </Head>
     <Table border :data="data.data" :columns="columns" :loading="loading"></Table>
     <Modal :title="info.title" v-model="info.is_show" @on-ok="ok">
       <Form :model="form" :label-width="100">
@@ -66,7 +61,12 @@
 </template>
 
 <script>
+import Head from '@/components/head'
+
 export default {
+  components:{
+      Head,
+  },
   data() {
     return {
       loading: false,
@@ -317,17 +317,6 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.admin-title {
-  padding-bottom: 9px;
-  margin: 20px 0 20px;
-  border-bottom: 1px solid #eee;
-}
-.admin-operation {
-  text-align: left;
-}
-.admin-search {
-  text-align: right;
-}
 .page {
   text-align: right;
   margin: 10px;

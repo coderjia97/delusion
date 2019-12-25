@@ -13,7 +13,7 @@ class Error extends Controller
 
     public function _empty($name)
     {
-        return [404,'no such service as'.$name];
+        return [404,'no such service as '.$name];
     }
 
     protected function db($table='')

@@ -19,7 +19,17 @@ const routes = [
         path: "/user",
         name: "用户模块",
         component: () => import('../views/user/index.vue'),
-      }
+      },
+      {
+        path: "/category",
+        name: "分类模块",
+        component: () => import('../views/category/index.vue'),
+      },
+      {
+        path: "/category/tree",
+        name: "分类树状图",
+        component: () => import('../views/category/tree.vue'),
+      },
     ],
   },
 ]
