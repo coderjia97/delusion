@@ -22,6 +22,30 @@ let api = {
             return ajax.post('user/changeStatus', id);
         },
     },
+
+    category: {
+        list: param => {
+            return ajax.post('category/list', param);
+        },
+        treeList: () => {
+            return ajax.post('category/treelist');
+        },
+        htmlList: () => {
+            return ajax.post('category/htmllist');
+        },
+        detail: id => {
+            return ajax.post('category/info', id);
+        },
+        insert: param => {
+            return ajax.post('category/insert', param);
+        },
+        delete: id => {
+            return ajax.post('category/delete', id);
+        },
+        update: param => {
+            return ajax.post('category/update', param);
+        },
+    }
     
 };
 

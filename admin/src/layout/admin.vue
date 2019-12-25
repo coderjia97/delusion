@@ -36,7 +36,7 @@
                             <Icon type="ios-people" />
                             用户
                         </MenuItem>
-                        <MenuItem name="3" to="/">
+                        <MenuItem name="3" to="/category">
                             <Icon type="md-share" />
                             分类
                         </MenuItem>

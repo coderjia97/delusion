@@ -19,7 +19,5 @@ class System extends Error
         $name = $info->getSaveName();
 
         return [200, 'http://uploads.myvue.com/' . $name];
-    }
-
-   
+    }   
 }
